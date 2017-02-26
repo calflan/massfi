@@ -1,0 +1,54 @@
+/* Base Styles
+-------------------------------------------------------------*/
+
+$primaryfont: 'Titillium Web', sans-serif;
+$primarycolor: #d81c25;
+$secondarycolor: #1b1b1b;
+
+
+/* Main
+-------------------------------------------------------------*/
+
+body {
+	font: $primaryfont;
+	color: $secondarycolor;
+	text-align: center;
+	margin: 0;
+}
+
+header {
+  color: $primarycolor;
+  background-color: $secondarycolor;
+  font-size: 28px;
+  padding: 20px;
+
+  input[type="text"] {
+    font-size: 18px;
+    color: black;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// footer {
+//   margin: 0;
+//   padding: 10px;
+//   background-color: black;
+//   color: white;
+//   font-size: 12px;
+// }
