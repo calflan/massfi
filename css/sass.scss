@@ -1,4 +1,4 @@
-/* Base Styles
+/* Standards
 -------------------------------------------------------------*/
 
 $primaryfont: 'Titillium Web', sans-serif;
@@ -6,7 +6,7 @@ $primarycolor: #d81c25;
 $secondarycolor: #1b1b1b;
 
 
-/* Main
+/* Base
 -------------------------------------------------------------*/
 
 body {
@@ -19,8 +19,12 @@ body {
 header {
   color: $primarycolor;
   background-color: $secondarycolor;
-  font-size: 28px;
-  padding: 20px;
+  padding: 10px;
+
+	p {
+		font-size: 30px;
+		margin-top: 20px;
+	}
 
   input[type="text"] {
     font-size: 18px;
@@ -28,27 +32,94 @@ header {
   }
 }
 
+footer {
+  margin: 0;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+}
+
+
+/* Main
+-------------------------------------------------------------*/
+
+.utilities {
+	list-style-type: none;
+	li {
+		display: inline;
+		a {
+			font-size: 10px;
+			color: $primarycolor;
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+}
+
+.product-img {
+	max-width: 50%;
+}
+
+.options {
+	padding: 10px;
+	border: 1px solid $primarycolor;
+	border-radius: 10px;
+	.row {
+		padding-bottom: 5px;
+		padding-top: 5px;
+		border-bottom: 1px solid #000;
+	}
+}
+
+.option {
+  color: #000;
+  border-color: $primarycolor;
+  font-size: 10px;
+  background: transparent;
+	&:hover {
+  	background-color:  #1EAEDB;
+	}
+}
+
+.quantity {
+	input {
+		display: inline;
+	}
+}
+
+
+.mini-rating {
+	img {
+		max-width: 40%;
+	}
+}
+
+.benifits {
+	margin-top: 20px;
+	img {
+		max-width: 5%;
+	}
+}
 
 
 
 
 
 
+@media (min-width: 620px) {
+	body {
+		text-align: left;
+	}
 
+	.product-img {
+		max-width: 100%;
+	}
 
-
-
-
-
-
-
-
-
-
-// footer {
-//   margin: 0;
-//   padding: 10px;
-//   background-color: black;
-//   color: white;
-//   font-size: 12px;
-// }
+	.benifits {
+		img {
+			max-width: 40%;
+		}
+	}
+}

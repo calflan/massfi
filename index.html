@@ -29,34 +29,164 @@
 
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <header>
-        <div class="four columns">
-          Mass.fi
+    <header>
+      <div class="row">
+        <div class="twelve columns">
+          <h1>Mass.fi</h1>
+        </div>
+        <!-- <div class="six columns">
+          <form>
+            <input type="text" class="seven columns"></input>
+            <button type="submit" class="button-primary five columns">SEARCH</button>
+          </form>
         </div>
         <div class="four columns">
-          <input type="text"></input><input type="submit" text="SEARCH" class="button-primary"></input>
-        </div>
-        <div class="four columns">
-          This and that
-        </div>
-      </header>
-    </div>
-  </div>
+          <ul class="utilities">
+            <li>
+              <a href="#">Tilausohjeita</a>
+            </li>
+            <li>
+              <a href="#">Ota yhteyttä</a>
+            </li>
+            <li>
+              <a href="#">EUR €</a>
+            </li>
+          </ul>
+        </div> -->
+      </div>
+    </header>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-    <div class="row">
-      <div class="twelve columns" style="margin-top: 5%">
-        <h1>Mass</h1>
-        <p>This page is a placeholder for the Mass.fi project I am doing at university for the Hut Group.</p>
-      </div>
-    </div>
+    <section class="row" style="margin-top: 5%">
+      <article class="three columns">
+        <img src="images/product.png" class="product-img" alt="Product image" role="img">
+      </article>
+
+      <article class="five columns">
+        <h2>Mass Recovery</h2>
+        <div class="options">
+          <div class="row">
+            <div class="four columns">
+              <p>Maku</p>
+            </div>
+            <div class="eight columns">
+              <button class="option" id="option1">Appelsiini Cream</button>
+              <button class="option" id="option2">Mansikka</button>
+              <button class="option">Suklaa</button>
+              <button class="option">Suklaa Minttu</button>
+              <button class="option">Vanilja</button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="four columns">
+              <p>Pakkaus</p>
+            </div>
+            <div class="eight columns">
+              <button class="option">Pussi</button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="four columns">
+              <p>Määrä</p>
+            </div>
+            <div class="eight columns">
+              <button class="option">2.5KG</button>
+              <button class="option">5KG</button>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="four columns">
+              <p>Lukumaara</p>
+            </div>
+            <div class="seven columns quantity">
+              <input type="button" onclick="decrementValue()" name="decrement" value="-">
+              <input type="text" id="number" name="Lukumaara" value="1">
+              <input type="button" onclick="incrementValue()" name="increment" value="+">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="twelve columns">
+              <button class="button-primary" type="submit">OSTA</button>
+            </div>
+          </div>
+        </div><!--end options-->
+      </article>
+
+      <article class="four columns">
+        <div class="row mini-rating">
+          <img src="images/stars.png"/>
+          <a href="#">353 Arvostelut</a>
+        </div>
+
+        <div class="row benifits">
+          <div class="row">
+            <div class="two columns">
+              <img src="images/tick.png"/>
+            </div>
+            <div class="ten columns">
+              <p>Tehostaa palautumista</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="two columns">
+              <img src="images/tick.png"/>
+            </div>
+            <div class="ten columns">
+              <p>Edesauttaa lihaskasvua</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="two columns">
+              <img src="images/tick.png"/>
+            </div>
+            <div class="ten columns">
+              <p>Sisältää laadukasta heraproteiinia</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="two columns">
+              <img src="images/tick.png"/>
+            </div>
+            <div class="ten columns">
+              <p>Sisältää nopeita hiilihydraatteja (maltodekstriini, dekstroosi)</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="two columns">
+              <img src="images/tick.png"/>
+            </div>
+            <div class="ten columns">
+              <p>Sisältää runsaasti lihaskasvulle tärkeitä haaraketjuisia aminohappoja (BCAA) ja glutamiinia</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="two columns">
+              <img src="images/tick.png"/>
+            </div>
+            <div class="ten columns">
+              <p>Massiiviset 71 annosta per pakkaus</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
   </div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <script src="js/buttons.js"></script>
+  <script src="js/plusMinus.js"></script>
 </body>
 </html>
