@@ -46,8 +46,8 @@
     padding: 0; }
 }
 
-/* For devices larger than 620px */
-@media (min-width: 620px) {
+/* For devices larger than 780px */
+@media (min-width: 780px) {
   .column,
   .columns {
     margin-left: 4%; }
@@ -121,14 +121,14 @@ body { font-weight: 400; }
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-weight: 300; }
-h1 { font-size: 40px; line-height: 44px;  letter-spacing: -.1rem;}
-h2 { font-size: 36px; line-height: 40px; letter-spacing: -.1rem; }
-h3 { font-size: 32px; line-height: 36px;  letter-spacing: -.1rem; }
-h4 { font-size: 28px; line-height: 32px; letter-spacing: -.08rem; }
-h5 { font-size: 24px; line-height: 28px;  letter-spacing: -.05rem; }
-h6 { font-size: 20px; line-height: 24px;  letter-spacing: 0; }
+h1 { font-size: 36px; line-height: 40px;  letter-spacing: -.1rem;}
+h2 { font-size: 32px; line-height: 36px; letter-spacing: -.1rem; }
+h3 { font-size: 28px; line-height: 32px;  letter-spacing: -.1rem; }
+h4 { font-size: 24px; line-height: 28px; letter-spacing: -.08rem; }
+h5 { font-size: 22px; line-height: 24px;  letter-spacing: -.05rem; }
+h6 { font-size: 18px; line-height: 22px;  letter-spacing: 0; }
 p { font-size: 16px; line-height: 20px; margin-top: 0; }
 
 
@@ -162,9 +162,7 @@ input[type="button"] {
   display: inline-block;
   height: 38px;
   padding: 0 10px;
-  margin-top: 10px;
   margin-bottom: 10px;
-  color: #555;
   text-align: center;
   font-size: 11px;
   font-weight: 600;
@@ -187,24 +185,24 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-  color: #333;
-  border-color: #888;
+  color: #000;
   outline: 0; }
 .button.button-primary,
-button.button-primary,
+.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
-  background-color: #d81c25;
-  border-color: #d81c25; }
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+  width: 100%; }
 .button.button-primary:hover,
-button.button-primary:hover,
+.button-primary:hover,
 input[type="submit"].button-primary:hover,
 input[type="reset"].button-primary:hover,
 input[type="button"].button-primary:hover,
 .button.button-primary:focus,
-button.button-primary:focus,
+.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
@@ -225,7 +223,7 @@ input[type="password"],
 textarea,
 select {
   height: 38px;
-  width: 35px;
+  width: 100%;
   text-align: center;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   margin-bottom: 20px;
@@ -320,7 +318,8 @@ th,
 td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #E1E1E1; }
+  border-bottom: 1px solid #E1E1E1;
+  font-size: 12px;}
 th:first-child,
 td:first-child {
   padding-left: 0; }
@@ -346,8 +345,8 @@ td:last-child {
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
-  margin-top: 3rem;
-  margin-bottom: 3.5rem;
+  margin-top: 10px;
+  margin-bottom: 20px;
   border-width: 0;
   border-top: 1px solid #E1E1E1; }
 
@@ -375,10 +374,18 @@ there.
 
 
 /* Larger than mobile */
-@media (min-width: 400px) {}
+@media (min-width: 370px) {
+  th,td {
+    font-size: 14px;
+  }
+}
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+  th,td {
+    font-size: 16px;
+  }
+}
 
 /* Larger than tablet */
 @media (min-width: 750px) {}

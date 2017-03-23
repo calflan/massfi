@@ -1,5 +1,6 @@
 /**
 * Gabe Calabro
+* http://stackoverflow.com/users/106403/gabe
 * http://jsfiddle.net/7va04ehz/
 */
 

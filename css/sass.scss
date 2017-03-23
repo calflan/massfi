@@ -3,14 +3,14 @@
 
 $primaryfont: 'Titillium Web', sans-serif;
 $primarycolor: #d81c25;
-$secondarycolor: #1b1b1b;
+$secondarycolor: #000;
 
 
 /* Base
 -------------------------------------------------------------*/
 
 body {
-	font: $primaryfont;
+	font-family: $primaryfont;
 	color: $secondarycolor;
 	text-align: center;
 	margin: 0;
@@ -44,6 +44,14 @@ footer {
 /* Main
 -------------------------------------------------------------*/
 
+#logo {
+	width: 15%;
+}
+
+#searchBar {
+	margin-top: 20px;
+}
+
 .utilities {
 	list-style-type: none;
 	li {
@@ -62,14 +70,28 @@ footer {
 	max-width: 50%;
 }
 
-.options {
-	padding: 10px;
+section {
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.information {
+	text-align: left;
+}
+
+.segment {
 	border: 1px solid $primarycolor;
 	border-radius: 10px;
+	padding: 20px;
+}
+
+.options {
 	.row {
 		padding-bottom: 5px;
 		padding-top: 5px;
-		border-bottom: 1px solid #000;
+		&:not(:last-child) {
+			border-bottom: 1px solid #000;
+		}
 	}
 }
 
@@ -86,9 +108,19 @@ footer {
 .quantity {
 	input {
 		display: inline;
+		&.plusMinus {
+			width: 40px;
+		}
+		&[type="text"] {
+			width: 50px;
+		}
 	}
 }
 
+h3.totalPrice {
+	margin-bottom: 0px;
+	color: $primarycolor;
+}
 
 .mini-rating {
 	img {
@@ -103,12 +135,24 @@ footer {
 	}
 }
 
+.review {
+	border: 1px solid #e2e2e2;
+	border-radius: 10px;
+	margin: 10px 0px;
+	padding: 10px;
+	background-color: #f1f1f1;
+	h5 {
+		color: #d81c25;
+	}
+}
 
 
 
 
 
-@media (min-width: 620px) {
+@media (min-width: 370px) {}
+
+@media (min-width: 780px) {
 	body {
 		text-align: left;
 	}
@@ -117,9 +161,25 @@ footer {
 		max-width: 100%;
 	}
 
+	.quantity {
+		margin-top: 15px;
+	}
+
 	.benifits {
 		img {
 			max-width: 40%;
 		}
 	}
+
+	.options {
+		padding: 20px;
+	}
+
+	#logo {
+		width: 30%;
+	}
 }
+
+@media (min-width: 1000px) {}
+
+@media (min-width: 1200px) {}

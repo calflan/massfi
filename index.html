@@ -31,10 +31,10 @@
 <body>
     <header>
       <div class="row">
-        <div class="twelve columns">
-          <h1>Mass.fi</h1>
+        <div class="three columns">
+          <img src="images/logo.png" alt="logo" id="logo">
         </div>
-        <!-- <div class="six columns">
+        <div class="five columns" id="searchBar">
           <form>
             <input type="text" class="seven columns"></input>
             <button type="submit" class="button-primary five columns">SEARCH</button>
@@ -52,31 +52,31 @@
               <a href="#">EUR €</a>
             </li>
           </ul>
-        </div> -->
+        </div>
       </div>
     </header>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
-    <section class="row" style="margin-top: 5%">
+    <section class="row">
       <article class="three columns">
         <img src="images/product.png" class="product-img" alt="Product image" role="img">
       </article>
 
       <article class="five columns">
         <h2>Mass Recovery</h2>
-        <div class="options">
+        <form class="options segment">
           <div class="row">
             <div class="four columns">
               <p>Maku</p>
             </div>
             <div class="eight columns">
-              <button class="option" id="option1">Appelsiini Cream</button>
-              <button class="option" id="option2">Mansikka</button>
-              <button class="option">Suklaa</button>
-              <button class="option">Suklaa Minttu</button>
-              <button class="option">Vanilja</button>
+              <input type="button" class="option" id="option1" value="Appelsiini Cream">
+              <input type="button" class="option" id="option2" value="Mansikka">
+              <input type="button" class="option" id="option3" value="Suklaa">
+              <input type="button" class="option" id="option4" value="Suklaa Minttu">
+              <input type="button" class="option" id="option5" value="Vanilja">
             </div>
           </div>
 
@@ -85,7 +85,7 @@
               <p>Pakkaus</p>
             </div>
             <div class="eight columns">
-              <button class="option">Pussi</button>
+              <input type="button" class="option" id="packaging1" value="Pussi">
             </div>
           </div>
 
@@ -94,8 +94,8 @@
               <p>Määrä</p>
             </div>
             <div class="eight columns">
-              <button class="option">2.5KG</button>
-              <button class="option">5KG</button>
+              <input type="button" class="option" id="size1" value="2.5KG">
+              <input type="button" class="option" id="size2" value="5KG">
             </div>
           </div>
 
@@ -104,18 +104,23 @@
               <p>Lukumaara</p>
             </div>
             <div class="seven columns quantity">
-              <input type="button" onclick="decrementValue()" name="decrement" value="-">
+              <input class="plusMinus" type="button" onclick="decrementValue()" name="decrement" value="-">
               <input type="text" id="number" name="Lukumaara" value="1">
-              <input type="button" onclick="incrementValue()" name="increment" value="+">
+              <input class="plusMinus" type="button" onclick="incrementValue()" name="increment" value="+">
             </div>
           </div>
 
           <div class="row">
             <div class="twelve columns">
-              <button class="button-primary" type="submit">OSTA</button>
+              <h3 class="totalPrice" id="totalPrice1">€38.99</h3>
+              <h3 class="totalPrice" id="totalPrice2">€72.99</h3>
+              <p>(per pussi)</p>
+            </div>
+            <div class="twelve columns">
+              <button class="button-primary" type="submit">Lisää ostoskoriin</button>
             </div>
           </div>
-        </div><!--end options-->
+        </form><!--end options-->
       </article>
 
       <article class="four columns">
@@ -181,12 +186,190 @@
         </div>
       </article>
     </section>
-  </div>
+
+    <section class="row">
+      <div class="segment information">
+        <input type="button" class="option" id="overviewButton" value="YLEISTÄ">
+        <input type="button" class="option" id="manualButton" value="KÄYTTÖOHJE">
+        <input type="button" class="option" id="ingredientsButton" value="AINESOSAT">
+        <input type="button" class="option" id="infoButton" value="RAVINTOSISÄLTÖ">
+        <input type="button" class="option" id="reviewButton" value="ARVOSTELE">
+
+        <hr>
+
+        <article id="overview">
+          <h4>Yleistä</h4>
+          <p>Mass Recovery on laadukas palautusjuomajauhe ja yksi myydyimmistä tuotteistamme. Palautumisjuoma on yksi tärkeimmistä urheilijan lisäravinteista. Palautumisjuomaa tarvitsee myös arkiliikuntaa suorittava henkilö, mikäli treeni on kuluttavaa ja tehokasta. Palautumisjuoma sisältää ainesosia, mitä kehomme tarvitsee välittömästi treenin jälkeen.</p>
+
+          <p>Palautuminen on tärkeä osa treeniä. Kehitys tapahtuu levossa, kehomme korjaa vaurioituneita lihaskudoksia juuri levossa. Mitä nopeampi ja tehokkaampi palautuminen, sitä paremmat tulokset. Panosta palautumiseen ja palautumisjuomaan!</p>
+
+          <p>Tätä hinta:laatu-suhdetta ei ihan heti lyödä laudalta.</p>
+
+          <h6>MASS RECOVERY – Palautumisjauomasekoitus</h6>
+
+          <p>Mass Recovery on sekoitus</p>
+
+          <ul>
+            <li>heraproteiinikonsentraattia</li>
+            <li>hydrolysoitua heraproteiinia</li>
+            <li>aminohappoja (BCAA, leusiini, isoleusiini, valiini)</li>
+            <li>kreatiinimonohydraattia.</li>
+            <li>Hiilihydraatteina palautusjuomassa on maltodekstriini ja dektroosi.</li>
+          </ul>
+
+          <p>Jokainen annos Mass Recovery:a sisältää yli 28g proteiinia, joka tukee lihasmassan ylläpitoa ja kasvua. Jokaisessa annoksessa on kreatiinimonohydraattia 3.5g, joka tehostaa fyysisen suorituksen tehoa ja räjähtävyyttä.</p>
+
+          <h6>PALAUTUMISJUOMAN KÄYTTÖ</h6>
+
+          <p>Mass Recovery palautumisjuoma on valmis sekoitus palautumiseen. Palautumisjuoma korkealla proteiinipitoisuudella, nopeilla hiilihydraateilla sekä lihaskasvulle tärkeillä aminohapoilla.</p>
+
+          <p>Palautusjuomajauheen nopeat hiilihydraatit imeytyvät nopeasti tehostaen palautumista. Nopeita hiilihydraatteja tarvitaan käytettyjen energiavarastojen nopeaan täyttämiseen. Treenin aikana tai lopussa käytettynä nopeat hiilihydraatit antavat myös nopeasti energiaa ja tehoa viimeisiin harjoitteisiin!</p>
+
+          <h6>LAATU &amp; VALMISTUS</h6>
+
+          <p>Erinomainen maku, sekoittuvuus ja laatu on pitkän tutkimus- ja kehitystyön tulosta.</p>
+
+          <p>Parhaan hyödyn saavuttamiseksi nauti palautusjuoma välittömästi treenin jälkeen. Voit myös nauttia juomaa välipalana turvataksesi riittävän proteiinin saannin.</p>
+
+          <h6>TIEDOKSI ALLERGISILLE</h6>
+
+          <p>Sisältää maitoa ja soijalesitiiniä (emulgointiaine).</p>
+        </article>
+
+        <article id="manual">
+          <h4>Käyttöohje</h4>
+          <p>Sekoita 2 annosmitallista (70 g) jauhetta 200-300 ml:aan kylmää vettä tai maitoa. Nauti 1-2 annosta päivässä, esimerkiksi yksi välittömästi treenin jälkeen, toinen aterioiden välillä tai aamiaisella.<p>
+
+          <h6>SÄILYTYSOHJE</h6>
+
+          <p>Säilytetään kuivassa ja viileässä.</p>
+        </article>
+
+        <article id="ingredients">
+          <h4>Ainesosat</h4>
+
+          <h6>Chocolate **UUSI KOOSTUMUS**</h6>
+          <p>Mass Recovery Protein Blend (heraproteiinikonsentraatti ja -hydrolysaatti, BCAA (L-leusiini, L-isoleusiini, L-valiini)), maltodekstriini, kaakaojauhe, kreatiinimonohydraatti, dekstroosi, kauratärkkelys, aromi, makeutusaine (asesulfaamikalium, sukraloosi), emulgointiaine (soijalesitiini).</p>
+
+          <h6>Chocolate Mint **UUSI KOOSTUMUS**</h6>
+          <p>Mass Recovery Protein Blend (heraproteiinikonsentraatti ja -hydrolysaatti, BCAA (L-leusiini, L-isoleusiini, L-valiini)), maltodekstriini, kaakaojauhe, kreatiinimonohydraatti, dekstroosi, kauratärkkelys, aromi, makeutusaine (asesulfaamikalium, sukraloosi), emulgointiaine (soijalesitiini).</p>
+
+          <h6>Strawberry **UUSI KOOSTUMUS**</h6>
+          <p>Mass Recovery Protein Blend (heraproteiinikonsentraatti ja -hydrolysaatti, BCAA (L-leusiini, L-isoleusiini, L-valiini)), maltodekstriini, kreatiinimonohydraatti, dekstroosi, kauratärkkelys, väri (punajuuriväri), aromi, happamuudensäätöaine (sitruunahappo), makeutusaine (asesulfaamikalium, sukraloosi), emulgointiaine (soijalesitiini).</p>
+
+          <h6>Vanilla **UUSI KOOSTUMUS**</h6>
+          <p>Mass Recovery Protein Blend (heraproteiinikonsentraatti ja -hydrolysaatti, BCAA (L-leusiini, L-isoleusiini, L-valiini)), maltodekstriini, kreatiinimonohydraatti, dekstroosi, kauratärkkelys, aromi, väri (kurkumiini), makeutusaine (asesulfaamikalium, sukraloosi), emulgointiaine (soijalesitiini).</p>
+        </article>
+
+        <article id="info">
+          <h4>Ravintosisältö</h4>
+          <table align="center">
+          	<thead>
+          		<tr>
+          			<td>&nbsp;</td>
+          			<td><strong>Per Annos</strong></td>
+          		</tr>
+          	</thead>
+          	<tbody>
+          		<tr>
+          			<td><strong>Energiaa</strong></td>
+          			<td>1119 kJ / 264 kcal</td>
+          		</tr>
+          		<tr>
+          			<td><strong>Rasvaa</strong></td>
+          			<td>0.02</td>
+          		</tr>
+          		<tr>
+          			<td><strong>josta tyydyttyneitä rasvahappoja</strong></td>
+          			<td>0.8 g</td>
+          		</tr>
+          		<tr>
+          			<td><strong>Hiilihydraatteja</strong></td>
+          			<td>30 g</td>
+          		</tr>
+          		<tr>
+          			<td><strong>joista sokereita</strong></td>
+          			<td>3.2 g</td>
+          		</tr>
+          		<tr>
+          			<td><strong>Proteiinia</strong></td>
+          			<td>31 g</td>
+          		</tr>
+          		<tr>
+          			<td><strong>Suolaa</strong></td>
+          			<td>0.18 g</td>
+          		</tr>
+          		<tr>
+          			<td><strong>Kreatiinimonohydraatti</strong></td>
+          			<td>3.5 g</td>
+          		</tr>
+          		<tr>
+          			<td><strong>L-Leusiini</strong></td>
+          			<td>0.35 g</td>
+          		</tr>
+          		<tr>
+          			<td><strong>L-Isoleusiini</strong></td>
+          			<td>0.18 g</td>
+          		</tr>
+          		<tr>
+          			<td><strong>L-Valiini</strong></td>
+          			<td>0.18 g</td>
+          		</tr>
+          	</tbody>
+          </table>
+        </article>
+
+        <article id="reviews">
+          <h4>Arvostele</h4>
+          <div class="review">
+            <h5>Good</h5>
+
+            <h5>Yhteensä:</h5>
+            <p>Tämä toimii. Nautin kyseisen tuotteen maidon kera. Ja kun tätä nauttii heti treenin jälkeen, palautuu virta kehoon eikä tarvitse heti kotiin tultua juosta nälissään ruokakaapille. Suosittelen.</p>
+
+            <p>20 March 2017 mukaan Ansku</p>
+          </div>
+
+          <div class="review">
+            <h5>Good</h5>
+
+            <h5>Yhteensä:</h5>
+            <p>Tämä toimii. Nautin kyseisen tuotteen maidon kera. Ja kun tätä nauttii heti treenin jälkeen, palautuu virta kehoon eikä tarvitse heti kotiin tultua juosta nälissään ruokakaapille. Suosittelen.</p>
+
+            <p>20 March 2017 mukaan Ansku</p>
+          </div>
+
+          <div class="review">
+            <h5>Good</h5>
+
+            <h5>Yhteensä:</h5>
+            <p>Tämä toimii. Nautin kyseisen tuotteen maidon kera. Ja kun tätä nauttii heti treenin jälkeen, palautuu virta kehoon eikä tarvitse heti kotiin tultua juosta nälissään ruokakaapille. Suosittelen.</p>
+
+            <p>20 March 2017 mukaan Ansku</p>
+          </div>
+
+          <div class="review">
+            <h5>Good</h5>
+
+            <h5>Yhteensä:</h5>
+            <p>Tämä toimii. Nautin kyseisen tuotteen maidon kera. Ja kun tätä nauttii heti treenin jälkeen, palautuu virta kehoon eikä tarvitse heti kotiin tultua juosta nälissään ruokakaapille. Suosittelen.</p>
+
+            <p>20 March 2017 mukaan Ansku</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div><!--End container-->
+
+  <footer>
+    <p>© 2017 Calum Flanagan</p>
+  </footer>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <script src="js/buttons.js"></script>
   <script src="js/plusMinus.js"></script>
+  <script src="js/tabs.js"></script>
 </body>
 </html>
