@@ -120,7 +120,7 @@ body { font-weight: 400; }
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
+  margin-top: 1rem;
   margin-bottom: 1rem;
   font-weight: 300; }
 h1 { font-size: 36px; line-height: 40px;  letter-spacing: -.1rem;}
@@ -147,9 +147,9 @@ p { font-size: 16px; line-height: 20px; margin-top: 0; }
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: #000; }
 a:hover {
-  color: #0FA0CE; }
+  color: blue; }
 
 
 /* Buttons
@@ -192,10 +192,12 @@ input[type="button"]:focus {
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-  color: #FFF;
+  color: #000;
   background-color: #4CAF50;
   border-color: #4CAF50;
-  width: 100%; }
+  width: 100%;
+  font-weight: bold;
+}
 .button.button-primary:hover,
 .button-primary:hover,
 input[type="submit"].button-primary:hover,
@@ -206,7 +208,6 @@ input[type="button"].button-primary:hover,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
-  color: #FFF;
   background-color: #1EAEDB;
   border-color: #1EAEDB; }
 

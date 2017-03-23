@@ -9,6 +9,7 @@ document.getElementById('manual').style.display='none';
 document.getElementById('ingredients').style.display='none';
 document.getElementById('info').style.display='none';
 document.getElementById('reviews').style.display='none';
+document.getElementById('returns').style.display='none';
 document.getElementById('overviewButton').style.backgroundColor='#d81c25';
 /*
 *
@@ -25,12 +26,14 @@ document.getElementById('overviewButton').onclick=function(){
   document.getElementById('ingredientsButton').style.backgroundColor='transparent';
   document.getElementById('infoButton').style.backgroundColor='transparent';
   document.getElementById('reviewButton').style.backgroundColor='transparent';
+  document.getElementById('returnsButton').style.backgroundColor='transparent';
 
   document.getElementById('overview').style.display='';
   document.getElementById('manual').style.display='none';
   document.getElementById('ingredients').style.display='none';
   document.getElementById('info').style.display='none';
   document.getElementById('reviews').style.display='none';
+  document.getElementById('returns').style.display='none';
 };
 
 // Make PayPal appear and card form/alipay disappear, when user clicks paypalButton.
@@ -41,12 +44,14 @@ document.getElementById('manualButton').onclick=function(){
   document.getElementById('ingredientsButton').style.backgroundColor='transparent';
   document.getElementById('infoButton').style.backgroundColor='transparent';
   document.getElementById('reviewButton').style.backgroundColor='transparent';
+  document.getElementById('returnsButton').style.backgroundColor='transparent';
 
   document.getElementById('overview').style.display='none';
   document.getElementById('manual').style.display='';
   document.getElementById('ingredients').style.display='none';
   document.getElementById('info').style.display='none';
   document.getElementById('reviews').style.display='none';
+  document.getElementById('returns').style.display='none';
 };
 
 // Make AliPay appear and card form/paypal disappear, when user clicks alipayButton.
@@ -57,12 +62,14 @@ document.getElementById('ingredientsButton').onclick=function(){
   document.getElementById('ingredientsButton').style.backgroundColor='#d81c25';
   document.getElementById('infoButton').style.backgroundColor='transparent';
   document.getElementById('reviewButton').style.backgroundColor='transparent';
+  document.getElementById('returnsButton').style.backgroundColor='transparent';
 
   document.getElementById('overview').style.display='none';
   document.getElementById('manual').style.display='none';
   document.getElementById('ingredients').style.display='';
   document.getElementById('info').style.display='none';
   document.getElementById('reviews').style.display='none';
+  document.getElementById('returns').style.display='none';
 };
 
 
@@ -75,12 +82,14 @@ document.getElementById('infoButton').onclick=function(){
   document.getElementById('ingredientsButton').style.backgroundColor='transparent';
   document.getElementById('infoButton').style.backgroundColor='#d81c25';
   document.getElementById('reviewButton').style.backgroundColor='transparent';
+  document.getElementById('returnsButton').style.backgroundColor='transparent';
 
   document.getElementById('overview').style.display='none';
   document.getElementById('manual').style.display='none';
   document.getElementById('ingredients').style.display='none';
   document.getElementById('info').style.display='';
   document.getElementById('reviews').style.display='none';
+  document.getElementById('returns').style.display='none';
 };
 
 document.getElementById('reviewButton').onclick=function(){
@@ -90,10 +99,29 @@ document.getElementById('reviewButton').onclick=function(){
   document.getElementById('ingredientsButton').style.backgroundColor='transparent';
   document.getElementById('infoButton').style.backgroundColor='transparent';
   document.getElementById('reviewButton').style.backgroundColor='#d81c25';
+  document.getElementById('returnsButton').style.backgroundColor='transparent';
 
   document.getElementById('overview').style.display='none';
   document.getElementById('manual').style.display='none';
   document.getElementById('ingredients').style.display='none';
   document.getElementById('info').style.display='none';
   document.getElementById('reviews').style.display='';
+  document.getElementById('returns').style.display='none';
+};
+
+document.getElementById('returnsButton').onclick=function(){
+
+  document.getElementById('overviewButton').style.backgroundColor='transparent';
+  document.getElementById('manualButton').style.backgroundColor='transparent';
+  document.getElementById('ingredientsButton').style.backgroundColor='transparent';
+  document.getElementById('infoButton').style.backgroundColor='transparent';
+  document.getElementById('reviewButton').style.backgroundColor='transparent';
+  document.getElementById('returnsButton').style.backgroundColor='#d81c25';
+
+  document.getElementById('overview').style.display='none';
+  document.getElementById('manual').style.display='none';
+  document.getElementById('ingredients').style.display='none';
+  document.getElementById('info').style.display='none';
+  document.getElementById('reviews').style.display='none';
+  document.getElementById('returns').style.display='';
 };
