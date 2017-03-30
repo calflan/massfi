@@ -32,7 +32,7 @@
     <header>
       <div class="row">
         <div class="four columns">
-          <h1><img src="images/logo.png" alt="logo" id="logo" role="image">Massa</h1>
+          <h1><img src="images/logo.png" alt="logo" id="logo" role="image"></h1>
         </div>
         <div class="five columns" id="searchBar">
           <form>
@@ -61,7 +61,14 @@
   <div class="container" role="main">
     <section class="row">
       <article class="three columns">
-        <img src="images/product.png" class="product-img" alt="Product image" role="image">
+        <p>Click image for larger view</p>
+        <img src="images/product.png" class="product-img" id="mainProduct" alt="Product image" role="image">
+
+        <div id="productModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImg" alt="product modal image" role="modal">
+          <div id="caption"></div>
+        </div>
       </article>
 
       <article class="five columns">
@@ -104,9 +111,9 @@
               <p>Lukumaara</p>
             </div>
             <div class="seven columns quantity">
-              <input class="plusMinus" type="button" onclick="decrementValue()" name="decrement" value="-">
+              <input class="plusMinus" type="button" onclick="decrementValue()" name="decrement" value=&minus;>
               <input type="text" id="number" name="Lukumaara" value="1">
-              <input class="plusMinus" type="button" onclick="incrementValue()" name="increment" value="+">
+              <input class="plusMinus" type="button" onclick="incrementValue()" name="increment" value=&plus;>
             </div>
           </div>
 
@@ -132,7 +139,7 @@
         <div class="row benifits">
           <div class="row">
             <div class="two columns">
-              <img src="images/tick.png"/>
+              <img src="images/tick.png" alt="Benifit bullet point" role="image">
             </div>
             <div class="ten columns">
               <p>Tehostaa palautumista</p>
@@ -141,7 +148,7 @@
 
           <div class="row">
             <div class="two columns">
-              <img src="images/tick.png"/>
+              <img src="images/tick.png" alt="Benifit bullet point" role="image">
             </div>
             <div class="ten columns">
               <p>Edesauttaa lihaskasvua</p>
@@ -150,7 +157,7 @@
 
           <div class="row">
             <div class="two columns">
-              <img src="images/tick.png"/>
+              <img src="images/tick.png" alt="Benifit bullet point" role="image">
             </div>
             <div class="ten columns">
               <p>Sisältää laadukasta heraproteiinia</p>
@@ -159,7 +166,7 @@
 
           <div class="row">
             <div class="two columns">
-              <img src="images/tick.png"/>
+              <img src="images/tick.png" alt="Benifit bullet point" role="image">
             </div>
             <div class="ten columns">
               <p>Sisältää nopeita hiilihydraatteja (maltodekstriini, dekstroosi)</p>
@@ -168,7 +175,7 @@
 
           <div class="row">
             <div class="two columns">
-              <img src="images/tick.png"/>
+              <img src="images/tick.png" alt="Benifit bullet point" role="image">
             </div>
             <div class="ten columns">
               <p>Sisältää runsaasti lihaskasvulle tärkeitä haaraketjuisia aminohappoja (BCAA) ja glutamiinia</p>
@@ -177,7 +184,7 @@
 
           <div class="row">
             <div class="two columns">
-              <img src="images/tick.png"/>
+              <img src="images/tick.png" alt="Benifit bullet point" role="image">
             </div>
             <div class="ten columns">
               <p>Massiiviset 71 annosta per pakkaus</p>
@@ -389,7 +396,7 @@
         <h6>Asiakkaat jotka ostivat tämän tuotteen ostivat myös:</h6>
         <div class="row">
           <div class="three columns related">
-            <img src="images/product2.png" class="product-img" alt="Product image" role="img">
+            <img src="images/product2.png" class="product-img" alt="Product image" role="image">
             <p>Product Name</p>
             <img src="images/stars.png" class="rating" alt="related product rating" role="image">
             <p>€25.99</p>
@@ -397,7 +404,7 @@
           </div>
 
           <div class="three columns related">
-            <img src="images/product2.png" class="product-img" alt="Product image" role="img">
+            <img src="images/product2.png" class="product-img" alt="Product image" role="image">
             <p>Product Name</p>
             <img src="images/stars.png" class="rating" alt="related product rating" role="image">
             <p>€25.99</p>
@@ -405,7 +412,7 @@
           </div>
 
           <div class="three columns related">
-            <img src="images/product2.png" class="product-img" alt="Product image" role="img">
+            <img src="images/product2.png" class="product-img" alt="Product image" role="image">
             <p>Product Name</p>
             <img src="images/stars.png" class="rating" alt="related product rating" role="image">
             <p>€25.99</p>
@@ -413,7 +420,7 @@
           </div>
 
           <div class="three columns related">
-            <img src="images/product2.png" class="product-img" alt="Product image" role="img">
+            <img src="images/product2.png" class="product-img" alt="Product image" role="image">
             <p>Product Name</p>
             <img src="images/stars.png" class="rating" alt="related product rating" role="image">
             <p>€25.99</p>
@@ -431,8 +438,9 @@
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-  <script src="js/buttons.js"></script>
-  <script src="js/plusMinus.js"></script>
-  <script src="js/tabs.js"></script>
+  <script src="js/buttons.min.js"></script>
+  <script src="js/plusMinus.min.js"></script>
+  <script src="js/tabs.min.js"></script>
+  <script src="js/modalImage.min.js"></script>
 </body>
 </html>

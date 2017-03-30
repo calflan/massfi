@@ -4,6 +4,16 @@
 * http://jsfiddle.net/7va04ehz/
 */
 
+/*
+* Two functions for incrementing and decrementing the
+* quantity value.
+
+* These functions are assigned to the corresponding
+* buttons in the HTMl, inside the psuedo class 'onclick'.
+
+* When the button is clicked, the corresponding function
+* is fired.
+*/
 
 function incrementValue()
 {
