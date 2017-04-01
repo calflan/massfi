@@ -31,27 +31,8 @@
 <body>
     <header>
       <div class="row">
-        <div class="four columns">
-          <h1><img src="images/logo.png" alt="logo" id="logo" role="image"></h1>
-        </div>
-        <div class="five columns" id="searchBar">
-          <form>
-            <input type="search" class="seven columns"></input>
-            <button type="submit" class="button-primary five columns">SEARCH</button>
-          </form>
-        </div>
-        <div class="three columns">
-          <ul class="utilities">
-            <li>
-              <a href="#">Tilausohjeita</a>
-            </li>
-            <li>
-              <a href="#">Ota yhteyttä</a>
-            </li>
-            <li>
-              <a href="#">EUR €</a>
-            </li>
-          </ul>
+        <div class="twelve columns">
+          <h1>Massa</h1>
         </div>
       </div>
     </header>
@@ -108,7 +89,7 @@
 
           <div class="row">
             <div class="four columns">
-              <p>Lukumaara</p>
+              <label><p>Lukumaara</p></label>
             </div>
             <div class="seven columns quantity">
               <input class="plusMinus" type="button" onclick="decrementValue()" name="decrement" value=&minus;>
@@ -439,8 +420,77 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
   <script src="js/buttons.min.js"></script>
-  <script src="js/plusMinus.min.js"></script>
   <script src="js/tabs.min.js"></script>
-  <script src="js/modalImage.min.js"></script>
+  <script>
+    /**
+    * Gabe Calabro
+    * http://stackoverflow.com/users/106403/gabe
+    * http://jsfiddle.net/7va04ehz/
+    */
+
+    /*
+    * Two functions for incrementing and decrementing the
+    * quantity value.
+
+    * These functions are assigned to the corresponding
+    * buttons in the HTMl, inside the psuedo class 'onclick'.
+
+    * When the button is clicked, the corresponding function
+    * is fired.
+    */
+
+    function incrementValue()
+    {
+        var value = parseInt(document.getElementById('number').value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        document.getElementById('number').value = value;
+    }
+
+    function decrementValue()
+    {
+        var value = parseInt(document.getElementById('number').value, 10);
+        value = isNaN(value) ? 0 : value;
+        value--;
+        document.getElementById('number').value = value;
+    }
+  </script>
+
+  <script>
+    // Insert modal into a variable for ease of use
+    var modal = document.getElementById('productModal');
+
+    /*
+    * Put the image inside a variable.
+    * When image is clicked, the modal opens.
+    * Insert image inside the modal and use the "alt"
+    * text as the caption.
+    */
+    var img = document.getElementById('mainProduct');
+    var modalImg = document.getElementById("modalImg");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+      // When image is clicked do the following
+        modal.style.display = "block";
+      //use the same src as the image
+        modalImg.src = this.src;
+      // use he alt text as the caption for the image
+        captionText.innerHTML = this.alt;
+    }
+
+    /*
+    * Place the <span> element inside a variable,
+    * that closes the modal
+    */
+    var close = document.getElementsByClassName("close")[0];
+
+    /*
+    * When the user clicks on <span> (x), hide the modal
+    * using display none.
+    */
+    close.onclick = function() {
+        modal.style.display = "none";
+    }
+  </script>
 </body>
 </html>
