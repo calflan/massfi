@@ -110,7 +110,7 @@ section {
 	input {
 		display: inline;
 		&.plusMinus {
-			width: 40px;
+			width: 60px;
 		}
 		&[type="text"] {
 			width: 50px;
@@ -300,6 +300,15 @@ h3.totalPrice {
 		}
 		.rating {
 			width: 40%;
+		}
+	}
+
+	.quantity {
+		input {
+			display: inline;
+			&.plusMinus {
+				width: 37px;
+			}
 		}
 	}
 }
